@@ -36,7 +36,9 @@ Not working yet — see [ARCHITECTURE.md](ARCHITECTURE.md):
 ## Roadmap
 
 Ordered by what unblocks the most. The test suite (99 tests) passes today, so
-each item below is about reach, not repair.
+none of this is repair — it is the distance between a monitor that observes and
+a tool you would trust on a machine you care about. Sections 1 and 2 are the
+ones everything else waits on.
 
 ### 1. Make enforcement actually enforce
 
@@ -51,6 +53,10 @@ The rule engine already decides; nothing carries the decision to the kernel.
       re-apply the ones it does. `reconciliation.py` has the shape, not the wiring.
 - [ ] Widen rule compilation past `ip daddr` + `tcp dport`: IPv6 (`ip6 daddr`),
       UDP, and port ranges are all silently dropped from a rule today.
+- [ ] Fail closed, or say so. A rule that cannot be compiled is currently
+      indistinguishable from one that was applied.
+- [ ] An enforcement audit trail that records what was actually run on the host,
+      not just what was decided.
 
 ### 2. Per-process blocking
 
@@ -85,7 +91,84 @@ signature pack holds one entry, EICAR.
 - [ ] Canary placement for the ransomware signals, which currently wait on files
       nobody creates.
 
-### 5. Ship it
+### 5. Capture that does not blink
+
+Capture samples `/proc` when someone asks for it — the UI button, or its 5-second
+poll. Anything that opens and closes between two samples never existed.
+
+- [ ] A continuous capture loop, not a per-request scan. The maintenance loop
+      that already runs every 60s only sweeps expired rules.
+- [ ] Move to socket events rather than polling: `netlink` `sock_diag` /
+      `inet_diag` notifications, or eBPF. Polling `/proc` cannot see a DNS lookup
+      or a short POST, which is exactly the traffic worth seeing.
+- [ ] Capture UDP alongside TCP. `/proc/net/udp{,6}` is read but a UDP flow has
+      no lifetime to attribute, so it needs its own handling.
+- [ ] Container and namespace awareness: a pid in another network namespace is
+      attributed to whatever the host sees, which is wrong rather than missing.
+
+### 6. Lock the control plane down
+
+`require_ingest_token` guards two ingest endpoints. Everything else — create a
+rule, delete a rule, apply enforcement, release something from quarantine — is
+unauthenticated.
+
+- [ ] Authenticate every mutating endpoint, not only ingest. Binding to
+      127.0.0.1 is not authentication: every other process on the box is local
+      too.
+- [ ] CSRF protection on the state-changing routes, since a page in the user's
+      browser can post to localhost.
+- [ ] Decide what the Qt client and the web UI authenticate *as*, and where that
+      credential lives on disk.
+- [ ] An audit log of who changed policy and when. Right now a rule appears with
+      no author and no history.
+
+### 7. Storage that survives a long run
+
+- [ ] Set the pragmas: `journal_mode=WAL`, `busy_timeout`, `foreign_keys=ON`.
+      None are set, and every read and write funnels through one connection
+      behind a single `RLock`, so a slow write blocks the whole UI.
+- [ ] Retention. `connection_event` grows without bound — there is no pruning,
+      no rollup, and no `VACUUM` anywhere in the tree.
+- [ ] Resolve the schema drift: tables are created twice, once by
+      `SqliteDatabase._bootstrap()` in Python and once by the numbered SQL
+      migrations. Two sources of truth for one schema is a bug waiting for a
+      release.
+- [ ] Squash the migration line to a baseline. The files number to 0136 with 17
+      actually present.
+
+### 8. The desktop client
+
+The Qt client covers connections, rules and approval prompts. The web UI covers
+sixteen sections.
+
+- [ ] Decide whether the tray client is a viewer or a full console, and close
+      the gap in whichever direction. Threats, health and quarantine have no
+      desktop surface at all today.
+- [ ] Ship it as something installable: AppImage or Flatpak. `cmake --install`
+      to `/usr/local` is a developer path, not a distribution one.
+- [ ] Autostart, and a reconnect that survives the backend restarting under it.
+
+### 9. Make the repo maintainable
+
+- [ ] CI. There is no `.github/` at all: 99 tests that only run when someone
+      remembers to run them.
+- [ ] Linting and typing gates — no ruff, mypy, eslint or pre-commit config
+      exists, though the UI does have a `typecheck` script nobody enforces.
+- [ ] Coverage measurement, so the tested-but-unfed services are visible as such.
+- [ ] Decide what the macOS and Windows enforcement backends are: they are
+      written and unit-tested, but nothing has run them on those systems. Either
+      exercise them in CI or mark them experimental in the docs.
+
+### 10. The UI at scale
+
+- [ ] Replace the 5-second full refresh with SSE or a WebSocket — there is no
+      streaming endpoint in the API today.
+- [ ] Paginate and virtualise the connection table. The endpoint caps at 500
+      rows and the client renders all of them.
+- [ ] Persist filters and sort, so a refresh does not throw away what the user
+      set up.
+
+### 11. Ship it
 
 - [ ] Choose a licence. There is none, so nobody may legally use this yet.
 - [ ] Real release signing: `sign_file_stub` is a SHA-256 attestation, or an HMAC
@@ -93,6 +176,11 @@ signature pack holds one entry, EICAR.
       public key.
 - [ ] A systemd unit and a `.deb`, so the backend survives a reboot without a
       terminal open.
+- [ ] A threat model in the docs. A tool that asks for this much privilege
+      should say plainly what it does and does not defend against.
+- [ ] Trademark hygiene pass before any public release: the README already
+      disclaims Little Snitch, the code has a `littlesnitch_linux` service
+      module that should be named for what it does instead.
 
 ## Quick start
 
