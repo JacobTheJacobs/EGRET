@@ -1,0 +1,76 @@
+2026-08-06 23:56:23,551 - aqt.main - INFO - installer 131211211757376 aqtinstall(aqt) v3.3.0 on Python 3.11.15 [CPython Clang 22.1.3 ]
+2026-08-06 23:56:23,551 - aqt.helper - DEBUG - helper 131211211757376 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/Updates.xml.sha256
+2026-08-06 23:56:24,459 - aqt.main - ERROR - installer 131211211757376 The packages ['qtbase'] were not found while parsing XML of package information!
+==============================Suggested follow-up:==============================
+* Please use 'aqt list-qt linux desktop --modules 6.5.3 <arch>' to show modules available.
+2026-08-07 00:00:00,975 - aqt.main - INFO - installer 126037615224640 aqtinstall(aqt) v3.3.0 on Python 3.11.15 [CPython Clang 22.1.3 ]
+2026-08-07 00:00:00,975 - aqt.helper - DEBUG - helper 126037615224640 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/Updates.xml.sha256
+2026-08-07 00:00:02,107 - aqt.helper - DEBUG - helper 129648711923520 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtbase-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z.sha256
+2026-08-07 00:00:02,115 - aqt.helper - DEBUG - helper 132196834793280 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtsvg-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z.sha256
+2026-08-07 00:00:02,115 - aqt.helper - DEBUG - helper 130765608015680 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtdeclarative-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z.sha256
+2026-08-07 00:00:02,123 - aqt.helper - DEBUG - helper 128521643079488 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qttools-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z.sha256
+2026-08-07 00:00:02,488 - aqt.helper - INFO - helper 129648711923520 Downloading qtbase...
+2026-08-07 00:00:02,489 - aqt.helper - INFO - helper 132196834793280 Downloading qtsvg...
+2026-08-07 00:00:02,488 - aqt.installer - DEBUG - installer 129648711923520 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtbase-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:02,489 - aqt.installer - DEBUG - installer 132196834793280 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtsvg-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:02,546 - aqt.helper - INFO - helper 128521643079488 Downloading qttools...
+2026-08-07 00:00:02,546 - aqt.installer - DEBUG - installer 128521643079488 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qttools-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:02,550 - aqt.helper - INFO - helper 130765608015680 Downloading qtdeclarative...
+2026-08-07 00:00:02,550 - aqt.installer - DEBUG - installer 130765608015680 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtdeclarative-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:02,867 - aqt.helper - DEBUG - helper 129648711923520 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtbase-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:02,867 - aqt.helper - INFO - helper 129648711923520 Redirected: mirror.maeen.sa
+2026-08-07 00:00:02,873 - aqt.helper - DEBUG - helper 132196834793280 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtsvg-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:02,873 - aqt.helper - INFO - helper 132196834793280 Redirected: mirror.maeen.sa
+2026-08-07 00:00:02,951 - aqt.helper - DEBUG - helper 130765608015680 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtdeclarative-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:02,951 - aqt.helper - INFO - helper 130765608015680 Redirected: mirror.maeen.sa
+2026-08-07 00:00:03,000 - aqt.helper - DEBUG - helper 128521643079488 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qttools-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:03,001 - aqt.helper - INFO - helper 128521643079488 Redirected: mirror.maeen.sa
+2026-08-07 00:00:27,055 - aqt.helper - WARNING - helper 128521643079488 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://ftp.jaist.ac.jp/pub/qtproject/'.
+2026-08-07 00:00:27,055 - aqt.helper - WARNING - helper 130765608015680 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://mirrors.dotsrc.org/qtproject/'.
+2026-08-07 00:00:27,055 - aqt.installer - DEBUG - installer 128521643079488 Download URL: https://ftp.jaist.ac.jp/pub/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qttools-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:27,056 - aqt.helper - WARNING - helper 132196834793280 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://ftp.fau.de/qtproject/'.
+2026-08-07 00:00:27,056 - aqt.helper - WARNING - helper 129648711923520 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://mirrors.ukfast.co.uk/sites/qt.io/'.
+2026-08-07 00:00:27,055 - aqt.installer - DEBUG - installer 130765608015680 Download URL: https://mirrors.dotsrc.org/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtdeclarative-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:27,056 - aqt.installer - DEBUG - installer 129648711923520 Download URL: https://mirrors.ukfast.co.uk/sites/qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtbase-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:27,056 - aqt.installer - DEBUG - installer 132196834793280 Download URL: https://ftp.fau.de/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtsvg-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:27,687 - aqt.installer - INFO - installer 132196834793280 Finished installation of qtsvg-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z in 25.57395465
+2026-08-07 00:00:27,697 - aqt.helper - DEBUG - helper 132196834793280 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qttranslations-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z.sha256
+2026-08-07 00:00:28,080 - aqt.helper - INFO - helper 132196834793280 Downloading qttranslations...
+2026-08-07 00:00:28,081 - aqt.installer - DEBUG - installer 132196834793280 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qttranslations-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:28,496 - aqt.helper - DEBUG - helper 132196834793280 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qttranslations-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:28,496 - aqt.helper - INFO - helper 132196834793280 Redirected: mirror.maeen.sa
+2026-08-07 00:00:31,776 - aqt.installer - INFO - installer 129648711923520 Finished installation of qtbase-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z in 29.66994253
+2026-08-07 00:00:31,800 - aqt.helper - DEBUG - helper 129648711923520 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z.sha256
+2026-08-07 00:00:32,278 - aqt.helper - INFO - helper 129648711923520 Downloading qtwayland...
+2026-08-07 00:00:32,279 - aqt.installer - DEBUG - installer 129648711923520 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:32,659 - aqt.helper - DEBUG - helper 129648711923520 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:32,660 - aqt.helper - INFO - helper 129648711923520 Redirected: mirror.maeen.sa
+2026-08-07 00:00:33,844 - aqt.installer - INFO - installer 130765608015680 Finished installation of qtdeclarative-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z in 31.73015273
+2026-08-07 00:00:33,863 - aqt.helper - DEBUG - helper 130765608015680 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341icu-linux-Rhel7.2-x64.7z.sha256
+2026-08-07 00:00:34,236 - aqt.helper - INFO - helper 130765608015680 Downloading icu...
+2026-08-07 00:00:34,237 - aqt.installer - DEBUG - installer 130765608015680 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341icu-linux-Rhel7.2-x64.7z
+2026-08-07 00:00:34,638 - aqt.helper - DEBUG - helper 130765608015680 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341icu-linux-Rhel7.2-x64.7z
+2026-08-07 00:00:34,638 - aqt.helper - INFO - helper 130765608015680 Redirected: mirror.maeen.sa
+2026-08-07 00:00:52,527 - aqt.helper - WARNING - helper 132196834793280 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://mirrors.aliyun.com/qt/'.
+2026-08-07 00:00:52,527 - aqt.installer - DEBUG - installer 132196834793280 Download URL: https://mirrors.aliyun.com/qt/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qttranslations-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:56,694 - aqt.helper - WARNING - helper 129648711923520 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://mirrors.ustc.edu.cn/qtproject/'.
+2026-08-07 00:00:56,694 - aqt.installer - DEBUG - installer 129648711923520 Download URL: https://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:58,668 - aqt.helper - WARNING - helper 130765608015680 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://ftp.yz.yamagata-u.ac.jp/pub/qtproject/'.
+2026-08-07 00:00:58,668 - aqt.installer - DEBUG - installer 130765608015680 Download URL: https://ftp.yz.yamagata-u.ac.jp/pub/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341icu-linux-Rhel7.2-x64.7z
+2026-08-07 00:00:59,273 - aqt.helper - INFO - helper 129648711923520 Downloading qtwayland: attempt #2...
+2026-08-07 00:00:59,273 - aqt.installer - DEBUG - installer 129648711923520 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:59,645 - aqt.helper - DEBUG - helper 129648711923520 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:00:59,645 - aqt.helper - INFO - helper 129648711923520 Redirected: mirror.maeen.sa
+2026-08-07 00:00:59,651 - aqt.installer - INFO - installer 132196834793280 Finished installation of qttranslations-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z in 31.95510463
+2026-08-07 00:01:23,676 - aqt.helper - WARNING - helper 129648711923520 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://mirrors.ustc.edu.cn/qtproject/'.
+2026-08-07 00:01:23,676 - aqt.installer - DEBUG - installer 129648711923520 Download URL: https://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:01:25,634 - aqt.helper - INFO - helper 129648711923520 Downloading qtwayland: attempt #3...
+2026-08-07 00:01:25,634 - aqt.installer - DEBUG - installer 129648711923520 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:01:26,013 - aqt.helper - DEBUG - helper 129648711923520 Asked to redirect(302) to: https://mirror.maeen.sa/qtproject/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:01:26,014 - aqt.helper - INFO - helper 129648711923520 Redirected: mirror.maeen.sa
+2026-08-07 00:01:50,044 - aqt.helper - WARNING - helper 129648711923520 Connection to 'https://download.qt.io' failed. Retrying with fallback 'https://ftp2.nluug.nl/languages/qt/'.
+2026-08-07 00:01:50,044 - aqt.installer - DEBUG - installer 129648711923520 Download URL: https://ftp2.nluug.nl/languages/qt/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z
+2026-08-07 00:02:30,039 - aqt.installer - INFO - installer 130765608015680 Finished installation of icu-linux-Rhel7.2-x64.7z in 116.17748390
+2026-08-07 00:05:31,384 - aqt.installer - INFO - installer 128521643079488 Finished installation of qttools-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z in 329.26227036
+2026-08-07 00:05:31,395 - aqt.installer - WARNING - installer 126037615224640 Caught ArchiveConnectionError, terminating installer workers
+2026-08-07 00:05:31,407 - aqt.main - ERROR - installer 126037615224640 Connection error: (MaxRetryError('HTTPSConnectionPool(host=\'ftp2.nluug.nl\', port=443): Max retries exceeded with url: /languages/qt/online/qtsdkrepository/linux_x64/desktop/qt6_653/qt.qt6.653.gcc_64/6.5.3-0-202309260341qtwayland-Linux-RHEL_8_4-GCC-Linux-RHEL_8_4-X86_64.7z (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for \'ftp2.nluug.nl\'. (_ssl.c:1016)")))'),)

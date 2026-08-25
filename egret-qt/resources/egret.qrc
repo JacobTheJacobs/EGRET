@@ -1,0 +1,6 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/icons">
+    <file alias="dev.egret.Native.svg">dev.egret.Native.svg</file>
+  </qresource>
+</RCC>

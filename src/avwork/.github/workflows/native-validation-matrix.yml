@@ -1,0 +1,29 @@
+name: native-validation-matrix
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    strategy:
+      matrix:
+        include:
+          - backend: macos
+            os: macos-latest
+          - backend: windows
+            os: windows-latest
+          - backend: linux
+            os: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    env:
+      EGRET_ENABLE_NATIVE_EXECUTION: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r requirements.txt
+      - if: matrix.backend == 'linux'
+        run: sudo apt-get update && sudo apt-get install -y nftables
+      - run: python scripts/validate_backend_on_host.py --backend ${{ matrix.backend }}

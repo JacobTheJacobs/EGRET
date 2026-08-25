@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+src/avwork/app/web/dist/
+
+# Build output
+build/
+src/avwork/dist/
+egret-qt/build/
+
+# Local state — databases, captured telemetry, runtime scratch
+*.sqlite3
+*.sqlite3-journal
+src/avwork/.runtime/
+
+# Secrets: ingest tokens and release signing material must never be committed
+*.key
+*.pem
+ingest-token
+*ingest-token*
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Third-party GPL-2.0 upstream, kept out of this repository so its licence does
+# not attach to the project. Clone it alongside if you need the packet path:
+#   git clone https://github.com/obdev/littlesnitch-linux.git
+littlesnitch-linux/
+
+# Stale agent scratch state, not part of the project
+.swarm/

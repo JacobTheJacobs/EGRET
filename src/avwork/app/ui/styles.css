@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+html {
+  background: #020617;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.scan-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #334155;
+  background: #020617;
+  padding: 0.625rem 0.75rem;
+  color: #e2e8f0;
+  outline: none;
+}
+
+.scan-input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px #38bdf8;
+}

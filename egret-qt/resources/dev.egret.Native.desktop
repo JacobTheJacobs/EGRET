@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Egret
+GenericName=Outbound Network Monitor
+Comment=See which processes connect out, and allow or deny them
+Exec=egret
+Icon=dev.egret.Native
+Terminal=false
+Categories=System;Monitor;Security;
+Keywords=firewall;network;connections;privacy;monitor;egress;
+StartupNotify=true
+StartupWMClass=egret

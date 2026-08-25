@@ -1,0 +1,14 @@
+{
+  "version": "default-1",
+  "signatures": [
+    {
+      "marker": "EDGE-MALWARE-TEST-MARKER",
+      "signature_name": "Edge.Test.Marker",
+      "family_name": "Test.EdgeMarker"
+    }
+  ],
+  "malicious_hashes": {},
+  "trusted_signers": ["OpenAI Test Publisher"],
+  "malicious_domains": ["evil-payload.bad"],
+  "phishing_domains": ["login-secure-check.bad"]
+}
